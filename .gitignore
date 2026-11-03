@@ -1,0 +1,7 @@
+.worktrees/
+backups/
+*.log
+*.bak
+.env
+.env.*
+!.env.example
