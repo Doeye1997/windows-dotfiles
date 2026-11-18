@@ -113,3 +113,20 @@ verify; read from the file only.
 ### Key names
 `oem_4` = `[`, `oem_6` = `]`, `oem_1` = `;`, `oem_plus` = `=`,
 `oem_minus` = `-`, `oem_comma` = `,`, `oem_period` = `.`.
+
+## Autostart
+
+Set 2026-11-18. komorebi starts at logon through the per-user Run key:
+
+```text
+HKCU\Software\Microsoft\Windows\CurrentVersion\Run
+  komorebi = "C:\Program Files\komorebi\bin\komorebic.exe" start --whkd
+```
+
+Verified by `reg query` readback. Not verified by an actual reboot.
+
+GlazeWM autostart: none found, so nothing was removed. Checked HKCU and HKLM
+`Run`, `StartupApproved\Run`, `StartupApproved\StartupFolder`, both Startup
+folders, and scheduled tasks. The GlazeWM config `startup_commands` only
+launches YASB; it is not a GlazeWM autostart switch. `GlazeWM.lnk` sits in
+the Start Menu Programs folder, not Startup.
