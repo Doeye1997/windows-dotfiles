@@ -120,6 +120,11 @@ window_rules:
   - commands: ["move --workspace 4", "set-floating --centered"]
     match:
       - window_process: { equals: "GameViewer" }
+        window_title: { equals: "网易UU远程" }
+
+  - commands: ["move --workspace 4"]
+    match:
+      - window_process: { equals: "GameViewer" }
 
 
 binding_modes:
