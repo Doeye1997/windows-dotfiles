@@ -117,6 +117,11 @@ window_rules:
       # Ignore all Linux GUI host windows
       - window_process: { equals: "msrdc" }
 
+  - commands: ["move --workspace 4", "set-floating --centered"]
+    match:
+      - window_process: { equals: "GameViewer" }
+
+
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
   - name: "resize"
